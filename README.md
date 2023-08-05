@@ -1,6 +1,6 @@
 # J.Z-personal-page
 
-Personal page
+A personal page
 
 ### Create with
 - Vite+React
