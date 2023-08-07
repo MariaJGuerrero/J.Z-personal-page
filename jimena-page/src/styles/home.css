@@ -1,4 +1,4 @@
-.home-header-large-view{
+.intro{
     background-image: url(/images/home-img.png);
     background-position: center;
     background-size: cover;
@@ -6,11 +6,46 @@
     max-width: 100%;
 }
 
-.sections.buttons{
+.sections-buttons{
     list-style: none;
+    
+}
+
+.nav-buttons{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+h2{
+    font-size: 3rem;
+    margin-top: 100px;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.about-content-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-wrap: wrap;*/
 }
 
 .photo-about{
-    height: 400px;
+    height: 300px;
     border-radius: 100%;
+    margin: 50px;
 }
+
+.text-about{
+    margin: 50px;
+}
+
+.text-interestings{
+    margin: 50px;
+}
+
+
