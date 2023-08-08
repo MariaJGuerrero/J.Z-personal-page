@@ -3,12 +3,12 @@
     background-position: center;
     background-size: cover;
     background-repeat:no-repeat ;
-    max-width: 100%;
+    width: 100%;
 }
 
 .sections-buttons{
     list-style: none;
-    
+    font-size: 2rem;
 }
 
 .nav-buttons{
@@ -21,10 +21,12 @@
 h2{
     font-size: 3rem;
     margin-top: 100px;
+    font-weight: bold;
 }
 
 p{
     font-size: 1.2rem;
+    font-weight: lighter;
 }
 
 .about-content-div{
