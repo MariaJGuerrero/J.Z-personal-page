@@ -6,6 +6,13 @@
     width: 100%;
 }
 
+.about-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .sections-buttons{
     list-style: none;
     font-size: 2rem;
@@ -19,9 +26,15 @@
 }
 
 h2{
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-top: 100px;
+    font-weight: bolder;
+    justify-self: center;
+}
+
+h3{
     font-weight: bold;
+    font-size:1.8rem;
 }
 
 p{
@@ -33,7 +46,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
 }
 
 .photo-about{
@@ -51,3 +64,39 @@ p{
 }
 
 
+.previously-work-text{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.today-work-text{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.proyects{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px;
+
+}
+
+.logo-img{
+    height: 200px;
+}
+
+.proyect-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+
+}

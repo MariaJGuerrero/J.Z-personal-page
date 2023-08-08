@@ -65,30 +65,32 @@ function Home() {
             <div className="work">
                 <h2>Work and Proyects</h2>
                 <div>
-                    <h3>I have worked on:</h3>
-                    <p>
-                    Looking at the high proportion of underreported hate speech attacks and the relatively few cases that end with sanctions, my previous work explored whether that apparent leniency towards speech harm was ingrained in our moral dispositions, making us evaluate the damage caused by words as less harmful and worthy of punishment and denunciation than that caused by (physical) acts when both stem from identical hateful intent and create same consequences for the victims. In a Pre-Registered Report (N=1309), we contradicted that possibility: participants consistently rated verbal hate attacks as more deserving of punishment and denunciation and more harmful to the victims than nonverbal attacks. We explain this difference by the concept of action aversion, suggesting that ordinary citizens have different intrinsic associations with interactions involving words compared to bodily actions regardless of consequences.
+                    <h3 className="previously-work-text">I have worked on:</h3>
+                    <p className="previously-work-text">
+                        Looking at the high proportion of underreported hate speech attacks and the relatively few cases that end with sanctions, my previous work explored whether that apparent leniency towards speech harm was ingrained in our moral dispositions, making us evaluate the damage caused by words as less harmful and worthy of punishment and denunciation than that caused by (physical) acts when both stem from identical hateful intent and create same consequences for the victims. In a Pre-Registered Report (N=1309), we contradicted that possibility: participants consistently rated verbal hate attacks as more deserving of punishment and denunciation and more harmful to the victims than nonverbal attacks. We explain this difference by the concept of action aversion, suggesting that ordinary citizens have different intrinsic associations with interactions involving words compared to bodily actions regardless of consequences.
 
-                    Before that, I obtained a Master in Logic and Philosophy of Science (UGR, Spain), writing a thesis titled “The Context-Dependence of the Normative Terms in Spanish Supreme Court Judgments”. 
+                        Before that, I obtained a Master in Logic and Philosophy of Science (UGR, Spain), writing a thesis titled “The Context-Dependence of the Normative Terms in Spanish Supreme Court Judgments”. 
 
-                    I have worked as a practising lawyer for over fifteen years.
+                        I have worked as a practising lawyer for over fifteen years.
                     </p>
-                    <h3>I'm workin on:</h3>
-                    <p>
+                    <h3 className="today-work-text">I'm workin on:</h3>
+                    <p className="today-work-text">
                         I am currently examining how bystanders’ responses to a hate speech incident affect one of its core dimensions: the public perception of the harm it causes to victims and society. By using experimental methods from the cognitive sciences, I explore whether ordinary citizens perceive hate speech incidents as more harmful when they occur in front of silent, passive bystanders, whether they find a voicing-opposition response helpful in reducing the harm and whether a collective opposition reduces the damage better than an individual.
                     </p>
                 </div>
             </div>
-                
                 <div className="proyects">
-                    <img src="/images/CUBE-Logo.jpg" alt="logo CVBE" />
-                    <p>CVBE Projects</p>
-                </div>
-                <div>
-                    <h3>Assessing Hate Speech Harm</h3>
-                    <p>
-                        This project investigates how bystanders’ responses to a hate speech incident affect one of its core dimensions: 
-                        the public perception of the harm it causes to victims and society.</p>
+                    <div className="logo">
+                        <h3>CVBE Projects</h3>
+                        <img className="logo-img" src="/images/CUBE-Logo.jpg" alt="logo CVBE" />
+                    </div>
+                    <div className="proyect-description">
+                        <h3>Assessing Hate Speech Harm</h3>
+                        <p>
+                            This project investigates how bystanders’ responses to a hate speech incident affect one of its core dimensions: 
+                            the public perception of the harm it causes to victims and society.
+                        </p>
+                    </div>
                 </div>
             <section className="contact"></section>
                 <h2>Contact me</h2>
