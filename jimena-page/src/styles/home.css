@@ -2,13 +2,24 @@
     background-image: url(/images/home-img.png);
     background-position: center;
     background-size: cover;
-    background-repeat:no-repeat ;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    min-height: 200px;
+}
+
+.menu{
+    background-color: black;
     width: 100%;
+    opacity: 0.3;
+    display: flex;
+    justify-content: flex-end;
+    min-height: 200px;
 }
 
 .sections-buttons{
     list-style: none;
-    font-size: 2rem;
+    
+    
 }
 
 .nav-buttons{
@@ -16,6 +27,13 @@
     border: none;
     color: white;
     cursor: pointer;
+    font-size: 1.2rem;
+    padding: 1%;
+    width: 100px;
+}
+
+.nav-buttons :hover{
+    text-shadow: 2px 2px 3px white;
 }
 
 h2{
@@ -46,6 +64,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 50px;
 }
@@ -65,6 +84,7 @@ p{
 
 .text-about{
     margin: 50px;
+    width: 50%;
 }
 
 .text-interestings{
@@ -77,6 +97,7 @@ p{
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .publications-title{
@@ -137,5 +158,12 @@ p{
     align-items: center;
     flex-direction: column;
     margin: 20px;
+}
 
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #6E85B7;
+    opacity: 0.8;
 }

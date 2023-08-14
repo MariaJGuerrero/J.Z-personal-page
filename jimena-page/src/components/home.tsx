@@ -13,9 +13,11 @@ function Home() {
 
     return (
       <div>
-        <header className="home-header-large-view">
+        <header className="home-header">
             <div className="intro">
-                <ul>
+                
+                <ul className="menu">
+                    <h1 style={{color: 'white', fontSize: '3rem'}}>JIMENA ZAPATA</h1>
                     <li className="sections-buttons"><button className="nav-buttons">About me</button></li>
                     <li className="sections-buttons"><button className="nav-buttons">Publications</button></li>
                     <li className="sections-buttons"><button className="nav-buttons">Proyects</button></li>
@@ -97,11 +99,12 @@ function Home() {
                     )}
                 </ul>
             </section>
-            <section className="contact"></section>
-                <h2>Contact me</h2>
+            <footer className="footer">
+                <h3>Contact me</h3>
                 <p>email</p>
                 <p> social media</p>
                 <p>...</p>
+            </footer>   
         </main>
       </div>
     )
