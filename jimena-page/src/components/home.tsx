@@ -15,14 +15,13 @@ function Home() {
       <div>
         <header className="home-header">
             <div className="intro">
-                
                 <ul className="menu">
-                    <h1 style={{color: 'white', fontSize: '3rem'}}>JIMENA ZAPATA</h1>
                     <li className="sections-buttons"><button className="nav-buttons">About me</button></li>
                     <li className="sections-buttons"><button className="nav-buttons">Publications</button></li>
                     <li className="sections-buttons"><button className="nav-buttons">Proyects</button></li>
                     <li className="sections-buttons"><button className="nav-buttons">Contact</button></li>
                 </ul>
+                <h1 style={{color: 'white', fontSize: '3rem'}}>JIMENA ZAPATA</h1>
             </div>
         </header>
         <main>

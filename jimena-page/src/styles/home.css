@@ -1,4 +1,4 @@
-.intro{
+.home-header{
     background-image: url(/images/home-img.png);
     background-position: center;
     background-size: cover;
@@ -7,10 +7,16 @@
     min-height: 200px;
 }
 
-.menu{
+
+.intro{
     background-color: black;
     width: 100%;
     opacity: 0.3;
+    text-align: center;
+
+}
+
+.menu{
     display: flex;
     justify-content: flex-end;
     min-height: 200px;
@@ -18,8 +24,7 @@
 
 .sections-buttons{
     list-style: none;
-    
-    
+    margin-top: 25px;
 }
 
 .nav-buttons{
@@ -130,6 +135,7 @@ p{
     display: flex;
     justify-content: flex-end;
     padding: 10px;
+    text-align: right;
 }
 
 .proyects{
@@ -158,11 +164,13 @@ p{
     align-items: center;
     flex-direction: column;
     margin: 20px;
+    text-align: center;
 }
 
 .footer{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     background-color: #6E85B7;
     opacity: 0.8;
