@@ -37,7 +37,7 @@
     width: 100px;
 }
 
-.nav-buttons :hover{
+.nav-buttons:hover{
     text-shadow: 2px 2px 3px white;
 }
 
