@@ -16,12 +16,17 @@ const Home = () => {
         const element = document.getElementById(id);
         element?.scrollIntoView({behavior: 'smooth'});
     }
+
+    const returnToUp = () => {
+        const element = document.getElementById('header');
+        element?.scrollIntoView({behavior: 'smooth'});
+    }
     
 
 
     return (
       <div>
-        <header className="home-header">
+        <header id="header" className="home-header">
             <div className="intro">
                 <ul className="menu">
                     {navList.map((element)=>
@@ -49,6 +54,7 @@ const Home = () => {
                         Philosophy of Mind | Social and Political Philosophy of Language | Hate Speech | Experimental Philosophy | Experimental Jurisprudence | Social Ontology | Moral Psychology | Public Policies | Philosophy of Law
                     </p>
                 </div>
+                <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
             </section>
            
             <section id="proyects" className="proyects-section">
@@ -81,6 +87,7 @@ const Home = () => {
                             the public perception of the harm it causes to victims and society.
                         </p>
                     </div>
+                    <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
                 </div>
             </section>
                 
@@ -104,12 +111,14 @@ const Home = () => {
                         <li style={{listStyle: 'none'}}><p>{text.text}</p></li>
                     )}
                 </ul>
+                <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
             </section>
             <footer id="contact" className="footer">
                 <h3>Contact me</h3>
                 <p>email</p>
                 <p> social media</p>
                 <p>...</p>
+                <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
             </footer>   
         </main>
       </div>
