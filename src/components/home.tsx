@@ -1,14 +1,22 @@
-import { conferencesArrayType, newsArrayType, publicationsArrayType } from "../models/types";
+import { conferencesArrayType, navListArrayType, newsArrayType, publicationsArrayType } from "../models/types";
 import "../styles/home.css";
+import { navListArray } from "../utils/nav-list-array";
 import { publicationsArray } from "../utils/publications-list-array";
 import { conferencesArray } from "../utils/publications-list-array";
 import { newsArray } from "../utils/publications-list-array";
 
-function Home() {
+const Home = () => {
 
     let publications: publicationsArrayType = publicationsArray;
     let conferences: conferencesArrayType = conferencesArray;
     let news: newsArrayType = newsArray;
+    let navList: navListArrayType = navListArray;
+
+    const scrolling = (id: string) => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({behavior: 'smooth'});
+    }
+    
 
 
     return (
@@ -16,16 +24,15 @@ function Home() {
         <header className="home-header">
             <div className="intro">
                 <ul className="menu">
-                    <li className="sections-buttons"><button className="nav-buttons">About me</button></li>
-                    <li className="sections-buttons"><button className="nav-buttons">Publications</button></li>
-                    <li className="sections-buttons"><button className="nav-buttons">Proyects</button></li>
-                    <li className="sections-buttons"><button className="nav-buttons">Contact</button></li>
+                    {navList.map((element)=>
+                       <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                    )}
                 </ul>
                 <h1 style={{color: 'white', fontSize: '3rem'}}>JIMENA ZAPATA</h1>
             </div>
         </header>
         <main>
-            <section className="about-section">
+            <section id="about" className="about-section">
                 <h2>About me</h2>
                 <div className="about-content-div">
                     <img className="photo-about" src="/images/Jimena-Zapata-e1590667874345-768x768.jpg" alt="woman photo" />
@@ -44,7 +51,7 @@ function Home() {
                 </div>
             </section>
            
-            <section className="proyects-section">
+            <section id="proyects" className="proyects-section">
                 <h2>Work and Proyects</h2>
                 <div className="work">
                     <div className="work-div">
@@ -77,7 +84,7 @@ function Home() {
                 </div>
             </section>
                 
-            <section className="publications-section">
+            <section id="publications" className="publications-section">
                 <h2>Publications</h2>
                 <h3 className="publications-title">Peer reviewed articles:</h3>
                 <ul className="publications-list">
@@ -98,7 +105,7 @@ function Home() {
                     )}
                 </ul>
             </section>
-            <footer className="footer">
+            <footer id="contact" className="footer">
                 <h3>Contact me</h3>
                 <p>email</p>
                 <p> social media</p>
