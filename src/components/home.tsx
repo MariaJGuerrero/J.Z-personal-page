@@ -6,7 +6,7 @@ import { conferencesArray } from "../utils/publications-list-array";
 import { newsArray } from "../utils/publications-list-array";
 
 const Home = () => {
-
+    
     let publications: publicationsArrayType = publicationsArray;
     let conferences: conferencesArrayType = conferencesArray;
     let news: newsArrayType = newsArray;
@@ -22,17 +22,21 @@ const Home = () => {
         element?.scrollIntoView({behavior: 'smooth'});
     }
     
-
+    const width: number = outerWidth
+   
 
     return (
       <div>
         <header id="header" className="home-header">
             <div className="intro">
-                <ul className="menu">
-                    {navList.map((element)=>
-                       <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
-                    )}
-                </ul>
+                <div className= { width < 576 ? "burger-menu" : "normal-menu"}>
+                    <ul className="menu">
+                        {navList.map((element)=>
+                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                        )}
+                    </ul>
+                    <img className="burger-symbol" src="/images/burger-menu.png" alt="menu symbol" />
+                </div>
                 <h1 style={{color: 'white', fontSize: '3rem'}}>JIMENA ZAPATA</h1>
             </div>
         </header>
@@ -112,6 +116,12 @@ const Home = () => {
                     )}
                 </ul>
                 <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
+            </section>
+            <section id="science">
+                <h2>Science Communication</h2>
+            </section>
+            <section id="more">
+                <h2>More</h2>
             </section>
             <footer id="contact" className="footer">
                 <h3>Contact me</h3>

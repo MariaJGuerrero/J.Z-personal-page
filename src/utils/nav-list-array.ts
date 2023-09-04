@@ -15,6 +15,16 @@ export let navListArray = [
     },
 
     {
+        name: 'Science Communication',
+        id: 'science'
+    },
+
+    {
+        name: 'More',
+        id: 'more'
+    },
+
+    {
         name: 'Contact',
         id: 'contact'
     },
