@@ -1,12 +1,12 @@
 export let navListArray = [
     {
-        name: 'About me',
+        name: 'About',
         id: 'about'
     },
 
     {
-        name: 'Proyects',
-        id: 'proyects'
+        name: 'Projects',
+        id: 'projects'
     },
 
     {
@@ -15,13 +15,13 @@ export let navListArray = [
     },
 
     {
-        name: 'Science Communication',
-        id: 'science'
+        name: 'More',
+        id: 'more'
     },
 
     {
-        name: 'More',
-        id: 'more'
+        name: 'Science Communication',
+        id: 'science'
     },
 
     {

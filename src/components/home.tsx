@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { conferencesArrayType, navListArrayType, newsArrayType, publicationsArrayType } from "../models/types";
 import "../styles/home.css";
 import { navListArray } from "../utils/nav-list-array";
@@ -6,6 +7,18 @@ import { conferencesArray } from "../utils/publications-list-array";
 import { newsArray } from "../utils/publications-list-array";
 
 const Home = () => {
+
+    useEffect(() => {
+        document.addEventListener( 'scroll', e => {
+            const currentScroll = document.querySelector('html')?.scrollTop
+            setScroll(currentScroll ?? 0)
+           
+        })
+    },[])
+    const [scroll, setScroll] = useState<number>(0);
+
+    console.log('scrooooool', scroll)
+
     
     let publications: publicationsArrayType = publicationsArray;
     let conferences: conferencesArrayType = conferencesArray;
@@ -26,23 +39,23 @@ const Home = () => {
    
 
     return (
-      <div>
-        <header id="header" className="home-header">
+      <div className="main">
+        <header  id="header" className= {scroll < 0 ? "home-header stick-header" : "home-header"}>
             <div className="intro">
+                <h1 style={{color: 'white', fontSize: '3rem'}}>Jimena Zapata</h1>
                 <div className= { width < 576 ? "burger-menu" : "normal-menu"}>
                     <ul className="menu">
                         {navList.map((element)=>
                         <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
                         )}
                     </ul>
-                    <img className="burger-symbol" src="/images/burger-menu.png" alt="menu symbol" />
+                    {/*<img className="burger-symbol" src="/images/burger-menu.png" alt="menu symbol" />*/}
                 </div>
-                <h1 style={{color: 'white', fontSize: '3rem'}}>JIMENA ZAPATA</h1>
             </div>
         </header>
         <main>
             <section id="about" className="about-section">
-                <h2>About me</h2>
+                <h2>About</h2>
                 <div className="about-content-div">
                     <img className="photo-about" src="/images/Jimena-Zapata-e1590667874345-768x768.jpg" alt="woman photo" />
                     <div className="text-about">
@@ -61,8 +74,8 @@ const Home = () => {
                 <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
             </section>
            
-            <section id="proyects" className="proyects-section">
-                <h2>Work and Proyects</h2>
+            <section id="projects" className="proyects-section">
+                <h2>Work and Projects</h2>
                 <div className="work">
                     <div className="work-div">
                         <h3 className="today-work-text">I'm workin on:</h3>
@@ -124,7 +137,7 @@ const Home = () => {
                 <h2>More</h2>
             </section>
             <footer id="contact" className="footer">
-                <h3>Contact me</h3>
+                <h2>Contact me</h2>
                 <p>email</p>
                 <p> social media</p>
                 <p>...</p>
