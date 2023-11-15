@@ -7,6 +7,10 @@
     min-height: 200px;
 }*/
 
+body{
+    margin: 0;
+}
+
 .stick-header{
     max-height: 50px;
     position: sticky;
@@ -15,29 +19,29 @@
 }
 
 
+
 .intro{
-    background: linear-gradient(black 95%, transparent) ;
+    background: linear-gradient(black 90%, transparent) ;
     width: 100%;
-    
+    height: 300px;
     opacity: 0.3;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
 
 .menu{
     display: flex;
     justify-content: center;
-    flex-direction: column;
     padding-inline-start: 0px;
-    max-width: 400px;
-    flex-wrap: wrap;
 }
 
 .sections-buttons{
     list-style: none;
     margin-top: 20px;
+   
 }
 
 .nav-buttons{
@@ -47,16 +51,19 @@
     cursor: pointer;
     font-size: 1.2rem;
     width: 100px;
+    font-family: 'Josefin Slab', serif;
 }
 
 .nav-buttons:hover{
     text-shadow: 2px 2px 3px white;
 }
 
+.burger-menu{
+    display: none;
+}
+
 .burger-symbol{
-    z-index: 100;
-    width: 30px;
-    height: 30px;
+    display: none;
 }
 
 h2{
@@ -197,11 +204,18 @@ p{
 
 
 @media (max-width: 576px){
-    .menu{
-        opacity: 0;
+    .normal-menu{
+        display: none;
     }
 
     .burger-menu{
-        opacity: 1;
+        display: flex;
+        justify-content: end;
+    }
+
+    .burger-symbol{
+        z-index: 100;
+        width: 30px;
+        height: 30px;
     }
 }

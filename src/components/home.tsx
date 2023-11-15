@@ -6,6 +6,7 @@ import { publicationsArray } from "../utils/publications-list-array";
 import { conferencesArray } from "../utils/publications-list-array";
 import { newsArray } from "../utils/publications-list-array";
 
+
 const Home = () => {
 
     useEffect(() => {
@@ -34,8 +35,6 @@ const Home = () => {
         const element = document.getElementById('header');
         element?.scrollIntoView({behavior: 'smooth'});
     }
-    
-    const width: number = outerWidth
    
 
     return (
@@ -43,17 +42,25 @@ const Home = () => {
         <header  id="header" className= {scroll < 0 ? "home-header stick-header" : "home-header"}>
             <div className="intro">
                 <h1 style={{color: 'white', fontSize: '3rem'}}>Jimena Zapata</h1>
-                <div className= { width < 576 ? "burger-menu" : "normal-menu"}>
+                <div className= "normal-menu">
                     <ul className="menu">
                         {navList.map((element)=>
                         <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
                         )}
                     </ul>
-                    {/*<img className="burger-symbol" src="/images/burger-menu.png" alt="menu symbol" />*/}
+                </div>
+                <div className= "burger-menu">
+                    <ul className="menu">
+                        {navList.map((element)=>
+                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                        )}
+                    </ul>
+                    <img style={{color: 'white'}} className="burger-symbol" src="/images/burger-menu.png" alt="menu symbol" />
+                    <i className="fa-regular fa-bars"></i>
                 </div>
             </div>
         </header>
-        <main>
+        <main className="all-sections">
             <section id="about" className="about-section">
                 <h2>About</h2>
                 <div className="about-content-div">

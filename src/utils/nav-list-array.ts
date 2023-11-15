@@ -10,6 +10,11 @@ export let navListArray = [
     },
 
     {
+        name: 'Science Communication',
+        id: 'science'
+    },
+
+    {
         name: 'Publications',
         id: 'publications'
     },
@@ -19,10 +24,7 @@ export let navListArray = [
         id: 'more'
     },
 
-    {
-        name: 'Science Communication',
-        id: 'science'
-    },
+    
 
     {
         name: 'Contact',
