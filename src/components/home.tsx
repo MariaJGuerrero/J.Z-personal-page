@@ -39,25 +39,23 @@ const Home = () => {
 
     return (
       <div className="main">
-        <header  id="header" className= {scroll < 0 ? "home-header stick-header" : "home-header"}>
-            <div className="intro">
-                <h1 style={{color: 'white', fontSize: '3rem'}}>Jimena Zapata</h1>
-                <div className= "normal-menu">
-                    <ul className="menu">
-                        {navList.map((element)=>
-                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
-                        )}
-                    </ul>
-                </div>
-                <div className= "burger-menu">
-                    <ul className="menu">
-                        {navList.map((element)=>
-                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
-                        )}
-                    </ul>
-                    <img style={{color: 'white'}} className="burger-symbol" src="/images/burger-menu.png" alt="menu symbol" />
-                    <i className="fa-regular fa-bars"></i>
-                </div>
+        <header  id="header" className= {scroll > 0 ? "home-header stick-header" : "home-header"}>
+            <h1 style={{color: 'white', fontSize: '3rem'}}>Jimena Zapata</h1>
+            <div className= "normal-menu">
+                <ul className="menu">
+                    {navList.map((element)=>
+                    <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                    )}
+                </ul>
+            </div>
+            <div className= "burger-menu">
+                <ul className="menu">
+                    {navList.map((element)=>
+                    <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                    )}
+                </ul>
+                <img style={{color: 'white'}} className="burger-symbol" src="/images/burger-menu.png" alt="menu symbol" />
+                <i className="fa-regular fa-bars"></i>
             </div>
         </header>
         <main className="all-sections">
