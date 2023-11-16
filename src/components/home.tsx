@@ -13,9 +13,9 @@ const Home = () => {
         document.addEventListener( 'scroll', e => {
             const currentScroll = document.querySelector('html')?.scrollTop
             setScroll(currentScroll ?? 0)
-           
         })
     },[])
+
     const [scroll, setScroll] = useState<number>(0);
 
     console.log('scrooooool', scroll)
@@ -31,9 +31,10 @@ const Home = () => {
         element?.scrollIntoView({behavior: 'smooth'});
     }
 
-    const returnToUp = () => {
-        const element = document.getElementById('header');
-        element?.scrollIntoView({behavior: 'smooth'});
+    const returnToTop = () => {
+        if(scroll > 0){
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
     }
    
 
@@ -76,7 +77,7 @@ const Home = () => {
                         Philosophy of Mind | Social and Political Philosophy of Language | Hate Speech | Experimental Philosophy | Experimental Jurisprudence | Social Ontology | Moral Psychology | Public Policies | Philosophy of Law
                     </p>
                 </div>
-                <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
+                <img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
             </section>
            
             <section id="projects" className="proyects-section">
@@ -109,7 +110,7 @@ const Home = () => {
                             the public perception of the harm it causes to victims and society.
                         </p>
                     </div>
-                    <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
+                    <img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
                 </div>
             </section>
                 
@@ -133,7 +134,7 @@ const Home = () => {
                         <li style={{listStyle: 'none'}}><p>{text.text}</p></li>
                     )}
                 </ul>
-                <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
+                <img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
             </section>
             <section id="science">
                 <h2>Science Communication</h2>
@@ -146,7 +147,7 @@ const Home = () => {
                 <p>email</p>
                 <p> social media</p>
                 <p>...</p>
-                <img onClick={()=> returnToUp()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
+                <img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
             </footer>   
         </main>
       </div>
