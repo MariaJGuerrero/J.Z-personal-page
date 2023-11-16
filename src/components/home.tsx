@@ -9,17 +9,17 @@ import { newsArray } from "../utils/publications-list-array";
 
 const Home = () => {
 
+    const container = document.querySelector('.all-sections')
+
     useEffect(() => {
-        document.addEventListener( 'scroll', e => {
-            const currentScroll = document.querySelector('html')?.scrollTop
+        container?.addEventListener( 'scroll',() => {
+            const currentScroll = container?.scrollTop
             setScroll(currentScroll ?? 0)
         })
     },[])
 
     const [scroll, setScroll] = useState<number>(0);
-
-    console.log('scrooooool', scroll)
-
+console.log(scroll)
     
     let publications: publicationsArrayType = publicationsArray;
     let conferences: conferencesArrayType = conferencesArray;
@@ -33,7 +33,7 @@ const Home = () => {
 
     const returnToTop = () => {
         if(scroll > 0){
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            container?.scrollTo({top: 0, behavior: 'smooth'});
         }
     }
    
@@ -45,14 +45,14 @@ const Home = () => {
             <div className= "normal-menu">
                 <ul className="menu">
                     {navList.map((element)=>
-                    <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
                     )}
                 </ul>
             </div>
             <div className= "burger-menu">
                 <ul className="menu">
                     {navList.map((element)=>
-                    <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
                     )}
                 </ul>
                 <img style={{color: 'white'}} className="burger-symbol" src="/images/burger-menu.png" alt="menu symbol" />

@@ -1,6 +1,21 @@
+#root{
+    height: 100%
+}
+
+
+html{
+ height: 100%;
+}
+
 body{
     margin: 0;
     overflow-x: hidden;
+    height: 100%;
+}
+
+.main{
+    height:100%;
+    overflow: hidden;
 }
 
 .home-header{
@@ -12,6 +27,7 @@ body{
     width: 100%;
     height: 300px;
     opacity: 0.3;
+    transition: 0.5;
 }
 
 .stick-header{
@@ -82,6 +98,11 @@ h4{
 p{
     font-size: 1.2rem;
     font-weight: lighter;
+}
+
+.all-sections{
+    height: 100%;
+    overflow: auto;
 }
 
 .about-section{
