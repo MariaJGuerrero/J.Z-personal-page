@@ -1,30 +1,34 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { conferencesArrayType, navListArrayType, newsArrayType, publicationsArrayType } from "../models/types";
 import "../styles/home.css";
 import { navListArray } from "../utils/nav-list-array";
 import { publicationsArray } from "../utils/publications-list-array";
 import { conferencesArray } from "../utils/publications-list-array";
 import { newsArray } from "../utils/publications-list-array";
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+
+
 
 
 const Home = () => {
 
-    const container = document.querySelector('.all-sections')
-
-    useEffect(() => {
-        container?.addEventListener( 'scroll',() => {
-            const currentScroll = container?.scrollTop
-            setScroll(currentScroll ?? 0)
-        })
-    },[])
-
-    const [scroll, setScroll] = useState<number>(0);
-console.log(scroll)
-    
     let publications: publicationsArrayType = publicationsArray;
     let conferences: conferencesArrayType = conferencesArray;
     let news: newsArrayType = newsArray;
     let navList: navListArrayType = navListArray;
+    
+    const container = useRef<HTMLDivElement | null>()
+    console.log (container)
+
+    const [scroll, setScroll] = useState<number>(0);
+    console.log(scroll)
+
+    useEffect(() => {
+        container.current?.addEventListener( 'scroll',() => {
+            const currentScroll = container.current?.scrollTop
+            setScroll(currentScroll ?? 0)
+        })
+    },[])
 
     const scrolling = (id: string) => {
         const element = document.getElementById(id);
@@ -33,16 +37,15 @@ console.log(scroll)
 
     const returnToTop = () => {
         if(scroll > 0){
-            container?.scrollTo({top: 0, behavior: 'smooth'});
+            container.current?.scrollTo({top: 0, behavior: 'smooth'});
         }
     }
    
-
     return (
       <div className="main">
         <header  id="header" className= {scroll > 0 ? "home-header stick-header" : "home-header"}>
             <h1 style={{color: 'white', fontSize: '3rem'}}>Jimena Zapata</h1>
-            <div className= "normal-menu">
+            <div className= "normal-menu" >
                 <ul className="menu">
                     {navList.map((element)=>
                         <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
@@ -50,16 +53,16 @@ console.log(scroll)
                 </ul>
             </div>
             <div className= "burger-menu">
+             
                 <ul className="menu">
                     {navList.map((element)=>
                         <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
                     )}
                 </ul>
-                <img style={{color: 'white'}} className="burger-symbol" src="/images/burger-menu.png" alt="menu symbol" />
-                <i className="fa-regular fa-bars"></i>
+               <FormatListBulletedIcon sx={{color: 'white'}} />
             </div>
         </header>
-        <main className="all-sections">
+        <div ref={container} className="all-sections">
             <section id="about" className="about-section">
                 <h2>About</h2>
                 <div className="about-content-div">
@@ -149,7 +152,7 @@ console.log(scroll)
                 <p>...</p>
                 <img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
             </footer>   
-        </main>
+        </div>
       </div>
     )
   }

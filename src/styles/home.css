@@ -72,9 +72,6 @@ body{
     display: none;
 }
 
-.burger-symbol{
-    display: none;
-}
 
 h2{
     font-size: 3.2rem;
@@ -96,7 +93,7 @@ h4{
 }
 
 p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: lighter;
 }
 
@@ -219,6 +216,16 @@ p{
 
 
 @media (max-width: 576px){
+    h1{
+        font-size: 2.8rem;
+    }
+    h2{
+        font-size: 3rem;   
+    }
+    .home-header{
+        justify-content: space-between;
+        flex-direction: row;
+    }
     .normal-menu{
         display: none;
     }
@@ -228,9 +235,10 @@ p{
         justify-content: end;
     }
 
-    .burger-symbol{
-        z-index: 100;
-        width: 30px;
-        height: 30px;
+    .burger-menu ul{
+        display: flex;
+        flex-direction: column;
     }
+
+    
 }
