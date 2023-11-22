@@ -5,7 +5,7 @@ import { navListArray } from "../utils/nav-list-array";
 import { publicationsArray } from "../utils/publications-list-array";
 import { conferencesArray } from "../utils/publications-list-array";
 import { newsArray } from "../utils/publications-list-array";
-import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import Hamburger from "./hamburger";
 
 
 
@@ -17,11 +17,17 @@ const Home = () => {
     let news: newsArrayType = newsArray;
     let navList: navListArrayType = navListArray;
     
-    const container = useRef<HTMLDivElement | null>()
-    console.log (container)
+    const container = useRef<HTMLDivElement | null>(null)
 
     const [scroll, setScroll] = useState<number>(0);
-    console.log(scroll)
+   
+    const [hamburgerOpen, setHamburgerOpen] = useState<boolean>(false)
+    console.log( hamburgerOpen)
+
+    const toggleHamburger = () => {
+        setHamburgerOpen(!hamburgerOpen)
+        console.log( hamburgerOpen)
+    }
 
     useEffect(() => {
         container.current?.addEventListener( 'scroll',() => {
@@ -52,14 +58,15 @@ const Home = () => {
                     )}
                 </ul>
             </div>
-            <div className= "burger-menu">
-             
-                <ul className="menu">
-                    {navList.map((element)=>
-                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
-                    )}
-                </ul>
-               <FormatListBulletedIcon sx={{color: 'white'}} />
+            <div className= "burger-menu" >
+                <div className="hamburger" onClick={() => {toggleHamburger()}}>
+                    <Hamburger />
+                    <ul className={hamburgerOpen ? "burger-inline" : "burger-none"}>
+                        {navList.map((element)=>
+                            <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                        )}
+                    </ul>
+                </div>
             </div>
         </header>
         <div ref={container} className="all-sections">
@@ -146,7 +153,7 @@ const Home = () => {
                 <h2>More</h2>
             </section>
             <footer id="contact" className="footer">
-                <h2>Contact me</h2>
+                <h2>Contact</h2>
                 <p>email</p>
                 <p> social media</p>
                 <p>...</p>

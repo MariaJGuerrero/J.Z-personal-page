@@ -73,6 +73,8 @@ body{
 }
 
 
+
+
 h2{
     font-size: 3.2rem;
     margin-top: 100px;
@@ -218,12 +220,14 @@ p{
 @media (max-width: 576px){
     h1{
         font-size: 2.8rem;
+        max-width: 150px;
+        
     }
     h2{
         font-size: 3rem;   
     }
     .home-header{
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: row;
     }
     .normal-menu{
@@ -235,10 +239,22 @@ p{
         justify-content: end;
     }
 
-    .burger-menu ul{
+    .burger-inline{
+        display: inline;
+        width: 50vw;
+        margin-top: 290px;
+        transform: translateX(-50%);
+     }
+     
+     .burger-none{
+         display: none;
+         opacity: 0;
+     }
+
+    /*.burger-menu ul{
         display: flex;
         flex-direction: column;
-    }
+    }*/
 
     
 }
