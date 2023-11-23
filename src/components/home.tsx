@@ -22,7 +22,7 @@ const Home = () => {
     const [scroll, setScroll] = useState<number>(0);
    
     const [hamburgerOpen, setHamburgerOpen] = useState<boolean>(false)
-    console.log( hamburgerOpen)
+    
 
     const toggleHamburger = () => {
         setHamburgerOpen(!hamburgerOpen)
@@ -61,14 +61,17 @@ const Home = () => {
             <div className= "burger-menu" >
                 <div className="hamburger" onClick={() => {toggleHamburger()}}>
                     <Hamburger />
-                    <ul className={hamburgerOpen ? "burger-inline" : "burger-none"}>
-                        {navList.map((element)=>
-                            <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
-                        )}
-                    </ul>
                 </div>
+                   
             </div>
         </header>
+        <div className={hamburgerOpen ? "burger-inline" : "burger-none"}>
+            <ul>
+                {navList.map((element)=>
+                    <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                )}
+            </ul>
+        </div>
         <div ref={container} className="all-sections">
             <section id="about" className="about-section">
                 <h2>About</h2>
