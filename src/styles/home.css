@@ -72,8 +72,6 @@ body{
 }
 
 
-
-
 h2{
     font-size: 3.2rem;
     margin-top: 100px;
@@ -141,11 +139,23 @@ p{
     flex-direction: column;
     flex-wrap: wrap;
     margin-bottom: 50px;
+    max-width: 100%;
 }
 
 .publications-title{
     display: flex;
     justify-content: start;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.publications-list{
+    width: 100%;
+    margin: auto;
+}
+
+.publications-list, ul{
+    padding: 0;
 }
 
 
@@ -238,6 +248,10 @@ p{
         justify-content: end;
     }
 
+    .nav-burger{
+        transition: 0.5;
+    }
+
     .burger-inline{
         display: flex;
         flex-direction: column;
@@ -246,17 +260,14 @@ p{
         background: #BBD6B8;
         top: 67px;
         right: 0;
+        transform: translateY(-50px)
      }
      
      .burger-none{
          display: none;
          opacity: 0;
+         transform: translateY(50px);
      }
-
-    /*.burger-menu ul{
-        display: flex;
-        flex-direction: column;
-    }*/
 
     
 }

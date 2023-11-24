@@ -26,13 +26,17 @@ const Home = () => {
 
     const toggleHamburger = () => {
         setHamburgerOpen(!hamburgerOpen)
-        console.log( hamburgerOpen)
     }
 
+    
     useEffect(() => {
         container.current?.addEventListener( 'scroll',() => {
             const currentScroll = container.current?.scrollTop
             setScroll(currentScroll ?? 0)
+            if(hamburgerOpen && currentScroll){
+                setHamburgerOpen(!hamburgerOpen)
+            }
+        
         })
     },[])
 
@@ -41,11 +45,11 @@ const Home = () => {
         element?.scrollIntoView({behavior: 'smooth'});
     }
 
-    const returnToTop = () => {
+    /*const returnToTop = () => {
         if(scroll > 0){
             container.current?.scrollTo({top: 0, behavior: 'smooth'});
         }
-    }
+    }*/
    
     return (
       <div className="main">
@@ -65,12 +69,14 @@ const Home = () => {
                    
             </div>
         </header>
-        <div className={hamburgerOpen ? "burger-inline" : "burger-none"}>
-            <ul>
-                {navList.map((element)=>
-                    <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
-                )}
-            </ul>
+        <div className="burger-menu nav-burger">
+            <div className={hamburgerOpen ? "burger-inline" : "burger-none"} >
+                <ul>
+                    {navList.map((element)=>
+                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                    )}
+                </ul>
+            </div>
         </div>
         <div ref={container} className="all-sections">
             <section id="about" className="about-section">
@@ -90,7 +96,7 @@ const Home = () => {
                         Philosophy of Mind | Social and Political Philosophy of Language | Hate Speech | Experimental Philosophy | Experimental Jurisprudence | Social Ontology | Moral Psychology | Public Policies | Philosophy of Law
                     </p>
                 </div>
-                <img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
+                {/*<img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />*/}
             </section>
            
             <section id="projects" className="proyects-section">
@@ -123,31 +129,35 @@ const Home = () => {
                             the public perception of the harm it causes to victims and society.
                         </p>
                     </div>
-                    <img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
+                    {/*<img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />*/}
                 </div>
             </section>
                 
             <section id="publications" className="publications-section">
                 <h2>Publications</h2>
                 <h3 className="publications-title">Peer reviewed articles:</h3>
-                <ul className="publications-list">
-                    {publications.map((publication)=>
-                        <li style={{listStyle: 'none'}}><p>{publication.text}</p></li>
-                    )}
-                </ul>
+                <div  className="publications-list">
+                    <ul>
+                        {publications.map((publication)=>
+                            <li style={{listStyle: 'none'}}><p>{publication.text}</p></li>
+                        )}
+                    </ul>
+                </div>
                 <h3 className="publications-title">Conference Talks & Posters</h3>
-                <ul className="conferences-list">
-                    {conferences.map((conference)=>
-                        <li style={{listStyle: 'none'}}><p>{conference.text}</p></li>
-                    )}
-                </ul>
+                <div  className="conferences-list">
+                    <ul>
+                        {conferences.map((conference)=>
+                            <li style={{listStyle: 'none'}}><p>{conference.text}</p></li>
+                        )}
+                    </ul>
+                </div>
                 <h3 className="publications-title">News</h3>
                 <ul className="news-list">
                     {news.map((text)=>
                         <li style={{listStyle: 'none'}}><p>{text.text}</p></li>
                     )}
                 </ul>
-                <img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
+                {/*<img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />*/}
             </section>
             <section id="science">
                 <h2>Science Communication</h2>
@@ -160,7 +170,7 @@ const Home = () => {
                 <p>email</p>
                 <p> social media</p>
                 <p>...</p>
-                <img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />
+                {/*<img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />*/}
             </footer>   
         </div>
       </div>

@@ -18,3 +18,16 @@
     transform-origin: 1px;
     transition: all 0.3s linear;
 }
+
+.burger1{
+    transform: ${hamburgerOpen ? 'rotate(45deg)' : 'rotate(0)'};
+}
+
+.burger2{
+    transform: ${hamburgerOpen ? 'translateX(100%)' : 'translateX(0)'} ;
+    opacity: ${hamburgerOpen ? 1 : 0};
+}
+
+.burger3{
+    transform: ${hamburgerOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+}
