@@ -142,7 +142,7 @@ const Home = () => {
                 <h2>Publications</h2>
                 <h3 className="publications-title">Peer reviewed articles:</h3>
                 <div  className="publications-list">
-                    <ul>
+                    <ul className="ul-publications">
                         {publications.map((publication)=>
                             <li style={{listStyle: 'none'}}><p>{publication.text}</p></li>
                         )}
@@ -150,18 +150,21 @@ const Home = () => {
                 </div>
                 <h3 className="publications-title">Conference Talks & Posters</h3>
                 <div  className="conferences-list">
-                    <ul>
+                    <ul className="ul-publications">
                         {conferences.map((conference)=>
                             <li style={{listStyle: 'none'}}><p>{conference.text}</p></li>
                         )}
                     </ul>
                 </div>
                 <h3 className="publications-title">News</h3>
-                <ul className="news-list">
-                    {news.map((text)=>
-                        <li style={{listStyle: 'none'}}><p>{text.text}</p></li>
-                    )}
-                </ul>
+                <div>
+                    <ul className="ul-publications">
+                        {news.map((text)=>
+                            <li style={{listStyle: 'none'}}><p>{text.text}</p></li>
+                        )}
+                    </ul>
+                </div>
+               
                 {/*<img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />*/}
             </section>
             <section id="science">

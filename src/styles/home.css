@@ -76,7 +76,8 @@ h2{
     font-size: 3.2rem;
     margin-top: 100px;
     font-weight: bolder;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
     
 }
 
@@ -98,7 +99,8 @@ p{
 
 .all-sections{
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .about-section{
@@ -134,28 +136,31 @@ p{
 
 .publications-section{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     margin-bottom: 50px;
-    max-block-size: 100%;
+    
 }
 
 .publications-title{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     width: 100%;
     margin-left: 20px;
 }
 
 .publications-list{
-    width: 100%;
     margin: auto;
 }
 
-.publications-list, ul{
+.ul-publications{
     padding: 0;
+    margin: 20px;
+    max-width: 90vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 
