@@ -33,9 +33,6 @@ const Home = () => {
         container.current?.addEventListener( 'scroll',() => {
             const currentScroll = container.current?.scrollTop
             setScroll(currentScroll ?? 0)
-            if(hamburgerOpen && currentScroll){
-                setHamburgerOpen(!hamburgerOpen)
-            }
         
         })
     },[])
@@ -43,6 +40,14 @@ const Home = () => {
     const scrolling = (id: string) => {
         const element = document.getElementById(id);
         element?.scrollIntoView({behavior: 'smooth'});
+    }
+
+    const clickHandler = (element: string) => {
+        if(hamburgerOpen === true){
+            setHamburgerOpen(false)
+            
+        }
+        scrolling(element)
     }
 
     /*const returnToTop = () => {
@@ -58,7 +63,7 @@ const Home = () => {
             <div className= "normal-menu" >
                 <ul className="menu">
                     {navList.map((element)=>
-                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                        <li className="sections-buttons"><button  onClick={()=> scrolling(element.id)}  className="nav-buttons">{element.name}</button></li>
                     )}
                 </ul>
             </div>
@@ -73,7 +78,7 @@ const Home = () => {
             <div className={hamburgerOpen ? "burger-inline" : "burger-none"} >
                 <ul>
                     {navList.map((element)=>
-                        <li className="sections-buttons"><button onClick={()=> scrolling(element.id)} className="nav-buttons">{element.name}</button></li>
+                        <li className="sections-buttons"><button onClick={()=> clickHandler(element.id)} className="nav-buttons">{element.name}</button></li>
                     )}
                 </ul>
             </div>
@@ -103,7 +108,7 @@ const Home = () => {
                 <h2>Work and Projects</h2>
                 <div className="work">
                     <div className="work-div">
-                        <h3 className="today-work-text">I'm workin on:</h3>
+                        <h3 className="today-work-text">I'm working on:</h3>
                         <p className="today-work-text">
                             I am currently examining how bystanders’ responses to a hate speech incident affect one of its core dimensions: the public perception of the harm it causes to victims and society. By using experimental methods from the cognitive sciences, I explore whether ordinary citizens perceive hate speech incidents as more harmful when they occur in front of silent, passive bystanders, whether they find a voicing-opposition response helpful in reducing the harm and whether a collective opposition reduces the damage better than an individual.
                         </p>

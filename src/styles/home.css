@@ -139,7 +139,7 @@ p{
     flex-direction: column;
     flex-wrap: wrap;
     margin-bottom: 50px;
-    max-width: 100%;
+    max-block-size: 100%;
 }
 
 .publications-title{
@@ -260,7 +260,7 @@ p{
         background: #BBD6B8;
         top: 67px;
         right: 0;
-        transform: translateY(-50px)
+        z-index: 100;
      }
      
      .burger-none{
