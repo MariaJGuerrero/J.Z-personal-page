@@ -30,7 +30,7 @@ body{
 }
 
 .stick-header{
-    max-height: 80px;
+    max-height: 95px;
     position: sticky;
     top: 0px;
     z-index: 100;
@@ -245,8 +245,9 @@ p{
     .home-header{
         justify-content: space-around;
         flex-direction: row;
-        min-height: 100px;
+       
     }
+
     .normal-menu{
         display: none;
     }
