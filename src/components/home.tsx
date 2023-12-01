@@ -141,7 +141,7 @@ const Home = () => {
             <section id="publications" className="publications-section">
                 <h2>Publications</h2>
                 <h3 className="publications-title">Peer reviewed articles:</h3>
-                <div  className="publications-list">
+                <div  className="div-list">
                     <ul className="ul-publications">
                         {publications.map((publication)=>
                             <li style={{listStyle: 'none'}}><p>{publication.text}</p></li>
@@ -149,7 +149,7 @@ const Home = () => {
                     </ul>
                 </div>
                 <h3 className="publications-title">Conference Talks & Posters</h3>
-                <div  className="conferences-list">
+                <div  className="div-list">
                     <ul className="ul-publications">
                         {conferences.map((conference)=>
                             <li style={{listStyle: 'none'}}><p>{conference.text}</p></li>
@@ -157,7 +157,7 @@ const Home = () => {
                     </ul>
                 </div>
                 <h3 className="publications-title">News</h3>
-                <div>
+                <div className="div-list">
                     <ul className="ul-publications">
                         {news.map((text)=>
                             <li style={{listStyle: 'none'}}><p>{text.text}</p></li>

@@ -149,8 +149,10 @@ p{
     margin-left: 20px;
 }
 
-.publications-list{
-    margin: auto;
+.div-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ul-publications{
@@ -243,6 +245,7 @@ p{
     .home-header{
         justify-content: space-around;
         flex-direction: row;
+        min-height: 100px;
     }
     .normal-menu{
         display: none;
