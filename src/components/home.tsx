@@ -4,7 +4,6 @@ import "../styles/home.css";
 import { navListArray } from "../utils/nav-list-array";
 import { publicationsArray } from "../utils/publications-list-array";
 import { conferencesArray } from "../utils/publications-list-array";
-import { newsArray } from "../utils/publications-list-array";
 import Hamburger from "./hamburger";
 
 
@@ -14,7 +13,6 @@ const Home = () => {
 
     let publications: publicationsArrayType = publicationsArray;
     let conferences: conferencesArrayType = conferencesArray;
-    let news: newsArrayType = newsArray;
     let navList: navListArrayType = navListArray;
     
     const container = useRef<HTMLDivElement | null>(null)
