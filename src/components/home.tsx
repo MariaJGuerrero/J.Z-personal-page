@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { conferencesArrayType, navListArrayType, newsArrayType, publicationsArrayType } from "../models/types";
+import { conferencesArrayType, navListArrayType, publicationsArrayType } from "../models/types";
 import "../styles/home.css";
 import { navListArray } from "../utils/nav-list-array";
 import { publicationsArray } from "../utils/publications-list-array";
