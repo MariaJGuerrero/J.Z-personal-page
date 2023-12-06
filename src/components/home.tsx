@@ -84,8 +84,8 @@ const Home = () => {
             </div>
         </div>
         <div ref={container} className="all-sections">
-            <section id="about" className="about-section">
-                <h2>About</h2>
+            <section id="Home" className="about-section">
+                <h2>Home</h2>
                 <div className="about-content-div">
                     <img className="photo-about" src="/images/Jimena-Zapata-e1590667874345-768x768.jpg" alt="woman photo" />
                     <div className="text-about">
@@ -104,8 +104,13 @@ const Home = () => {
                 {/*<img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />*/}
             </section>
            
-            <section id="projects" className="proyects-section">
-                <h2>Work and Projects</h2>
+            <section id="reading & watching" className="proyects-section">
+                <h2>Reading & Watching</h2>
+                
+            </section>
+                
+            <section id="Thinking & writing" className="publications-section">
+                <h2>Thinking & Writing</h2>
                 <div className="work">
                     <div className="work-div">
                         <h3 className="today-work-text">I'm working on:</h3>
@@ -122,24 +127,6 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <div className="proyects">
-                    <div className="cvbe-container">
-                        <h3>CVBE Projects</h3>
-                        <img className="logo-img" src="/images/CUBE-Logo.jpg" alt="logo CVBE" />
-                    </div>
-                    <div className="proyect-description">
-                        <h4>Assessing Hate Speech Harm</h4>
-                        <p>
-                            This project investigates how bystanders’ responses to a hate speech incident affect one of its core dimensions: 
-                            the public perception of the harm it causes to victims and society.
-                        </p>
-                    </div>
-                    {/*<img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />*/}
-                </div>
-            </section>
-                
-            <section id="publications" className="publications-section">
-                <h2>Publications</h2>
                 <h3 className="publications-title">Peer reviewed articles:</h3>
                 <div  className="div-list">
                     <ul className="ul-publications">
@@ -155,23 +142,39 @@ const Home = () => {
                             <li style={{listStyle: 'none'}}><p>{conference.text}</p></li>
                         )}
                     </ul>
+                </div>             
+                <div className="proyects">
+                    <div  className="cvbe-news-container">
+                        <h3 className="publications-title">News</h3>
+                        <button className="logos-buttons"><a  target= "_blank" href="https://www.lmu.de/en/newsroom/news-overview/news/hate-speech-words-can-hurt-more-than-actions.html"><img className="logo-img" src="/images/Logo_LMU.svg" alt="Logo LMU" /></a></button>
+                        {/*<div className="div-list">
+                            <ul className="ul-publications">
+                                {news.map((text)=>
+                                    <li style={{listStyle: 'none'}}><button>{text.text}</button></li>
+                                )}
+                            </ul>
+                        </div>*/}
+                    </div>
+                    <div className="cvbe-news-container">
+                        <h3>CVBE Projects</h3>
+                        <button className="logos-buttons"><a  target= "_blank" href="https://cvbers.com/"><img className="logo-img" src="/images/CUBE-Logo.jpg" alt="Logo CVBE" /></a></button>
+                    </div>
+                    {/*<div className="proyect-description">
+                        <h4>Assessing Hate Speech Harm</h4>
+                        <p>
+                            This project investigates how bystanders’ responses to a hate speech incident affect one of its core dimensions: 
+                            the public perception of the harm it causes to victims and society.
+                        </p>
+                    </div>*/}
+                    {/*<img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />*/}
                 </div>
-                <h3 className="publications-title">News</h3>
-                <div className="div-list">
-                    <ul className="ul-publications">
-                        {news.map((text)=>
-                            <li style={{listStyle: 'none'}}><p>{text.text}</p></li>
-                        )}
-                    </ul>
-                </div>
-               
                 {/*<img onClick={()=> returnToTop()} style={{height: 80, width: 80, cursor: 'pointer'}} src="/images/up-arrow.png" alt="up-arrow" />*/}
             </section>
-            <section id="science">
-                <h2>Science Communication</h2>
+            <section id="Sharing & Connecting" className="sharing-section">
+                <h2>Sharing & Connecting</h2>
             </section>
-            <section id="more">
-                <h2>More</h2>
+            <section id="Hiking & Exploring">
+                <h2>Hiking & Exploring</h2>
             </section>
             <footer id="contact" className="footer">
                 <h2>Contact</h2>

@@ -58,9 +58,9 @@ body{
     border: none;
     color: white;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: 100px;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Cormorant Garamont', serif;
 }
 
 .nav-buttons:hover{
@@ -78,7 +78,7 @@ h2{
     font-weight: bolder;
     display: flex;
     justify-content: center;
-    
+    font-family: 'Cormorant Garamont', serif;
 }
 
 h3{
@@ -95,6 +95,7 @@ h4{
 p{
     font-size: 1.5rem;
     font-weight: lighter;
+    font-family: 'CormorantGaramont-light', serif;
 }
 
 .all-sections{
@@ -195,11 +196,19 @@ p{
 
 .proyects{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.cvbe-container{
+.logos-buttons{
+    border: none;
+    background: transparent;
+}
+
+.cvbe-news-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -210,7 +219,7 @@ p{
 .logo-img{
     height: 100px;
     margin-left: 20px;
-    border-radius: 10%;
+    
 }
 
 .proyect-description{
@@ -220,6 +229,10 @@ p{
     flex-direction: column;
     margin: 20px;
     text-align: center;
+}
+
+.sharing-section{
+    background-color: #FAF0D7;
 }
 
 .footer{

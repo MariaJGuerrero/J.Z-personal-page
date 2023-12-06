@@ -1,27 +1,27 @@
 export let navListArray = [
     {
-        name: 'About',
-        id: 'about'
+        name: 'Home',
+        id: 'Home'
     },
 
     {
-        name: 'Projects',
-        id: 'projects'
+        name: 'Reading & Watching',
+        id: 'reading & watching'
     },
 
     {
-        name: 'Science Communication',
-        id: 'science'
+        name: 'Thinking & Writing',
+        id: 'Thinking & writing'
     },
 
     {
-        name: 'Publications',
-        id: 'publications'
+        name: 'Sharing & Connecting',
+        id: 'Sharing & Connecting'
     },
 
     {
-        name: 'More',
-        id: 'more'
+        name: 'Hiking & Exploring',
+        id: 'Hiking & Exploring'
     },
 
     
